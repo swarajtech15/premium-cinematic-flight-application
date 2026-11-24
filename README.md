@@ -1,8 +1,8 @@
-# ✈️ Premium Cinematic Flight Booking Application
+# ✈️ SNC AEROVA
 
-### A Next-Generation Flight Booking Experience
+### Beyond the Horizon
 
-A premium, cinematic flight booking web application designed to transform the traditional airline reservation experience into an immersive and visually engaging journey.
+SNC AEROVA is a premium, cinematic flight booking web application designed to transform the traditional airline reservation experience into an immersive and visually engaging journey.
 
 Combining elegant typography, smooth scrolling animations, interactive aircraft seat selection, and an intuitive booking interface, this project demonstrates how modern web technologies can create an exceptional user experience.
 
@@ -14,7 +14,7 @@ Built as a **fully interactive UI/UX demonstration**, the application allows use
 
 ## 🌟 Project Overview
 
-The Premium Cinematic Flight Booking Application focuses on combining **cinematic storytelling with functional web design**.
+SNC AEROVA focuses on combining **cinematic storytelling with functional web design**.
 
 Rather than presenting users with a conventional flight booking interface, the application introduces an immersive experience featuring animated transitions, elegant layouts, and interactive booking components.
 
@@ -296,7 +296,7 @@ The application does not provide real airline tickets, process actual payments, 
 
 GitHub: [@swarajtech15](https://github.com/swarajtech15)
 
-**Project:** Premium Cinematic Flight Booking Application
+**Project:** SNC AEROVA
 
 **Focus:** UI/UX Design • Frontend Development • Interactive Web Experiences
 

@@ -1,3 +1,5 @@
+import { BRAND_NAME } from "./brand";
+
 const SCROLL_KEY = "airlinesIntroScroll";
 
 // The head script runs before the browser paints or restores scroll on a fresh intro.
@@ -52,7 +54,7 @@ export async function prepareCinematicAssets(image: HTMLImageElement | null) {
     image?.decode?.(),
     document.fonts?.load('500 1em "Cormorant Garamond"', "Some journeys"),
     document.fonts?.load('italic 400 1em "Cormorant Garamond"', "begin quietly."),
-    document.fonts?.load('600 1em "Manrope Variable"', "Airlines"),
+    document.fonts?.load('600 1em "Manrope Variable"', BRAND_NAME),
   ]);
 }
 

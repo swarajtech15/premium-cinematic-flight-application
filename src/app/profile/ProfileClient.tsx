@@ -9,6 +9,7 @@ import { AirlineBadge } from "@/components/FlightCard";
 import { AIRLINES, airportByCode, fareById, formatCurrency } from "@/lib/data";
 import { arrival, fmtDate, fmtTime } from "@/lib/flight-utils";
 import { bookingDeparture, bookingHref, bookingPhase, type BookingDTO } from "@/lib/bookings";
+import { BRAND_NAME } from "@/lib/brand";
 import { DEMO_PROFILE_NAME } from "@/lib/demo-profile";
 import { ProfileSettings } from "./ProfileSettings";
 import { useDemoState } from "@/lib/demo-storage";
@@ -135,7 +136,7 @@ export function ProfileClient() {
         <span aria-hidden="true" className="serif grid h-14 w-14 shrink-0 place-items-center rounded-full border border-sand-400 bg-cream-200 text-2xl font-semibold text-taupe-600 sm:h-20 sm:w-20 sm:text-4xl">DP</span>
         <div>
           <h1 className="serif text-5xl font-medium sm:text-6xl">{DEMO_PROFILE_NAME}</h1>
-          <p className="mt-2 text-sm text-ink-700">Your trips and preferences are saved in this browser.</p>
+          <p className="mt-2 text-sm text-ink-700">Your {BRAND_NAME} trips and preferences are saved in this browser.</p>
         </div>
       </div>
 

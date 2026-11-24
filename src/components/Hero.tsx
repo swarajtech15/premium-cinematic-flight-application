@@ -3,6 +3,7 @@
 import { useLayoutEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { BRAND_NAME, BRAND_TAGLINE, BRAND_WELCOME_LINE } from "@/lib/brand";
 import { introIsLoading, prepareCinematicAssets, rememberIntroScroll, savedIntroScroll } from "@/lib/cinematic-entry";
 import { useScroller } from "./Providers";
 
@@ -241,7 +242,7 @@ export function Hero() {
 
       {/* Stage 1 */}
       <div className="absolute inset-0 z-20 flex flex-col items-center justify-center px-6 text-center">
-        <p className="s1-eyebrow eyebrow mb-6">Airlines · A new way to arrive</p>
+        <p className="s1-eyebrow eyebrow mb-6">{BRAND_NAME} · {BRAND_TAGLINE}</p>
         <h1 className="s1 serif text-[clamp(3rem,9.5vw,8.5rem)] font-medium leading-[0.95] tracking-tight text-ink-900">
           <Chars text="Some journeys" />
           <br />
@@ -271,13 +272,13 @@ export function Hero() {
       {/* Final reveal */}
       <div className="welcome-wrap absolute inset-0 z-40 flex flex-col items-center justify-center px-6 text-center">
         <p className="w-sub mb-6 eyebrow">Your journey awaits</p>
-        <h2 className="welcome serif text-[clamp(3.2rem,10vw,9rem)] font-medium leading-[0.95] text-ink-900">
-          <Chars text="Welcome to" />
+        <h2 aria-label={`WELCOME TO ${BRAND_NAME}`} className="welcome serif whitespace-nowrap text-[clamp(2.3rem,9.5vw,9rem)] font-medium leading-[0.95] text-ink-900 sm:text-[clamp(3.2rem,10vw,9rem)]">
+          <Chars text="WELCOME TO" />
           <br />
-          <Chars text="Airlines" className="italic text-taupe-600" />
+          <Chars text={BRAND_NAME} className="italic text-taupe-600" />
         </h2>
         <div className="w-line mx-auto my-8 h-px w-40 bg-gradient-to-r from-transparent via-gold to-transparent" />
-        <p className="w-sub serif text-[clamp(1.4rem,3vw,2.3rem)] italic text-ink-800">Have your journey starting here.</p>
+        <p className="w-sub serif text-[clamp(1.4rem,3vw,2.3rem)] italic text-ink-800">{BRAND_WELCOME_LINE}</p>
         <div className="w-cta mt-10">
           <button
             className="btn btn-gold !px-9 !py-4 text-base"

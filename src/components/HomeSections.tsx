@@ -4,6 +4,7 @@ import { useRef } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { motion, useScroll, useTransform } from "motion/react";
+import { BRAND_NAME } from "@/lib/brand";
 import { SearchPanel } from "./SearchPanel";
 import { BlurText, CountUp, Magnet, ShinyText, SpotlightCard, SplitText } from "./bits";
 import { useScroller } from "./Providers";
@@ -133,7 +134,7 @@ export function Experience() {
         <div ref={ref} className="relative h-[34rem] overflow-hidden rounded-[2rem] shadow-[0_30px_70px_-30px_rgba(90,66,40,0.55)]">
           <motion.div style={{ y }} className="absolute -inset-y-[10%] inset-x-0">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/cabin.png" alt="Airlines cabin" className="h-full w-full object-cover" />
+            <img src="/images/cabin.png" alt={`${BRAND_NAME} cabin`} className="h-full w-full object-cover" />
           </motion.div>
           <div className="absolute inset-0 bg-gradient-to-t from-ink-900/50 to-transparent" />
           <p className="serif absolute bottom-7 left-7 max-w-[16rem] text-3xl italic text-cream-50">Stillness, at thirty-eight thousand feet.</p>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { BRAND_NAME, BRAND_TAGLINE } from "@/lib/brand";
 import { Logo } from "./Navbar";
 
 export function Footer() {
@@ -8,7 +9,7 @@ export function Footer() {
         <div className="md:col-span-2">
           <Logo />
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-ink-700">
-            Have your journey starting here. Quiet cabins, considered service and a booking experience as calm as the
+            {BRAND_TAGLINE}. Quiet cabins, considered service and a booking experience as calm as the
             sky above the clouds.
           </p>
         </div>
@@ -29,7 +30,7 @@ export function Footer() {
         </div>
       </div>
       <div className="border-t border-sand-300/60 py-5 text-center text-xs text-ink-700">
-        © {new Date().getFullYear()} Airlines. A demonstration booking experience — flights, fares and payments are simulated.
+        © {new Date().getFullYear()} {BRAND_NAME}. A demonstration booking experience — flights, fares and payments are simulated.
       </div>
     </footer>
   );

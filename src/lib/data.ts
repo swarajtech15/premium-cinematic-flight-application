@@ -1,3 +1,5 @@
+import { BRAND_NAME } from "./brand";
+
 // Shared (client + server) static reference data.
 
 export type Airport = {
@@ -36,7 +38,7 @@ export const airportByCode = (code: string) => AIRPORTS.find((a) => a.code === c
 
 export type Airline = { code: string; name: string; color: string };
 export const AIRLINES: Record<string, Airline> = {
-  AL: { code: "AL", name: "Airlines", color: "#85694a" },
+  AL: { code: "AL", name: BRAND_NAME, color: "#85694a" },
   AR: { code: "AR", name: "Aurora Air", color: "#b5703f" },
   MR: { code: "MR", name: "Meridian Airways", color: "#5f7a68" },
   SL: { code: "SL", name: "Solstice Air", color: "#a8864a" },

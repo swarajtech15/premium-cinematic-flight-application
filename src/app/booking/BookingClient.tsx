@@ -8,6 +8,7 @@ import { BoardingPass } from "@/components/BoardingPass";
 import { Modal } from "@/components/Modal";
 import { SeatMap } from "@/components/SeatMap";
 import { AirlineBadge } from "@/components/FlightCard";
+import { BRAND_NAME, BRAND_SLUG } from "@/lib/brand";
 import { AIRLINES, airportByCode, fareById, formatCurrency } from "@/lib/data";
 import { addDays, arrival, departUtc, fmtDate, fmtDuration, fmtTime } from "@/lib/flight-utils";
 import { cancelDemoBooking, changeDemoSeats, demoBooking, demoTakenSeats } from "@/lib/demo-bookings";
@@ -87,8 +88,9 @@ function BookingDetails({ booking, pickerTaken, notifyUpdates, isNew }: {
     const ics = [
       "BEGIN:VCALENDAR",
       "VERSION:2.0",
-      "PRODID:-//Airlines//Booking//EN",
+      `PRODID:-//${BRAND_NAME}//Booking//EN`,
       "BEGIN:VEVENT",
+      // Keep the original UID namespace so existing calendar imports still match.
       `UID:${booking.reference}@airlines.demo`,
       `DTSTAMP:${icsDate(Date.now())}`,
       `DTSTART:${icsDate(start)}`,
@@ -103,7 +105,7 @@ function BookingDetails({ booking, pickerTaken, notifyUpdates, isNew }: {
     const url = URL.createObjectURL(new Blob([ics], { type: "text/calendar" }));
     const a = document.createElement("a");
     a.href = url;
-    a.download = `airlines-${booking.reference}.ics`;
+    a.download = `${BRAND_SLUG}-${booking.reference}.ics`;
     a.click();
     setTimeout(() => URL.revokeObjectURL(url), 1000);
   };

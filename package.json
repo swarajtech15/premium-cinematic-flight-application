@@ -1,5 +1,5 @@
 {
-  "name": "airlines-browser-demo",
+  "name": "snc-aerova",
   "private": true,
   "scripts": {
     "dev": "next dev",

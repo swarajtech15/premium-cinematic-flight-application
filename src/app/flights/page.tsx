@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 import { FlightsClient } from "./FlightsClient";
 
-export const metadata = { title: "Flights — Airlines" };
+export const metadata = { title: "Flights" };
 
 export default function FlightsPage() {
   return (

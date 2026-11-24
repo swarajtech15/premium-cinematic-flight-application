@@ -8,14 +8,25 @@ import "@fontsource-variable/manrope";
 import "./globals.css";
 import { Providers } from "@/components/Providers";
 import { Navbar } from "@/components/Navbar";
+import { BRAND_NAME, BRAND_TAGLINE } from "@/lib/brand";
 import { INTRO_BOOTSTRAP } from "@/lib/cinematic-entry";
 import { THEME_BOOTSTRAP } from "@/lib/demo-profile";
 import { Footer } from "@/components/Footer";
 
+const description = `${BRAND_NAME} · ${BRAND_TAGLINE}. Explore a cinematic flight booking demo, compare fares, and choose your seat.`;
+
 export const metadata: Metadata = {
-  title: "Airlines — Have your journey starting here",
-  description:
-    "A luxury flight booking experience. Search flights, compare fares, choose your seat and travel beautifully.",
+  applicationName: BRAND_NAME,
+  title: {
+    default: `${BRAND_NAME} — ${BRAND_TAGLINE}`,
+    template: `%s — ${BRAND_NAME}`,
+  },
+  description,
+  openGraph: {
+    type: "website",
+    siteName: BRAND_NAME,
+    description,
+  },
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {

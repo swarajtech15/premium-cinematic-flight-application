@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { useCurrency } from "./Providers";
+import { BRAND_NAME } from "@/lib/brand";
 import { DEMO_PROFILE_NAME } from "@/lib/demo-profile";
 import { CURRENCIES, currencyByCode } from "@/lib/data";
 
@@ -15,7 +16,7 @@ export function Logo({ className = "" }: { className?: string }) {
         <path d="M6 18.5 24.5 9.5c1.2-.6 2.3.5 1.7 1.7L17 23l-2.2-4.6L6 18.5Z" fill="var(--color-ink-800)" />
         <path d="m14.8 18.4 4-4.2" stroke="var(--color-cream-100)" strokeWidth="1.1" strokeLinecap="round" />
       </svg>
-      <span className="serif text-[1.3rem] font-medium leading-none tracking-wide sm:text-[1.65rem]">Airlines</span>
+      <span className="serif brand-wordmark whitespace-nowrap text-[1.3rem] font-medium leading-none tracking-[0.035em] sm:text-[1.65rem]">{BRAND_NAME}</span>
     </span>
   );
 }
@@ -170,8 +171,8 @@ export function Navbar() {
       }`}
     >
       <div className="mx-auto flex h-[4.5rem] max-w-7xl items-center justify-between px-3 sm:px-8">
-        <Link href="/" aria-label="Airlines home" onClick={() => setMenu(false)}>
-          <Logo />
+        <Link href="/" aria-label={`${BRAND_NAME} home`} onClick={() => setMenu(false)}>
+          <Logo className="max-sm:[&_.brand-wordmark]:text-[clamp(0.78rem,4vw,1.3rem)]" />
         </Link>
         <nav className="hidden items-center gap-8 lg:flex">
           {links.map((l) => (

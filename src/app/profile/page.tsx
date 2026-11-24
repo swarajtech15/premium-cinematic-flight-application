@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 import { ProfileClient } from "./ProfileClient";
 
-export const metadata = { title: "Demo Profile — Airlines" };
+export const metadata = { title: "Demo Profile" };
 
 export default function ProfilePage() {
   return (

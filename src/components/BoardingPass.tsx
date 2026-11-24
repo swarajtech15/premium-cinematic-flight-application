@@ -2,6 +2,7 @@
 
 import qrcode from "qrcode-generator";
 import { motion } from "motion/react";
+import { BRAND_NAME } from "@/lib/brand";
 import { AIRLINES, airportByCode, fareById } from "@/lib/data";
 import { fmtDate, fmtTime, gateFor, hash, seatInfo, type FlightBase } from "@/lib/flight-utils";
 import type { BookingDTO } from "@/lib/bookings";
@@ -154,7 +155,7 @@ export function BoardingPass({
         </div>
         <div className="hidden w-full md:block"><Barcode seed={`${booking.reference}${seq}`} /></div>
         <div className="flex flex-col items-center gap-1">
-          <BoardingQr value={`AIRLINES DEMO${void_ ? " VOID" : ""}\n${booking.reference} ${f.flightNumber} ${f.origin}-${f.destination}\n${booking.travelDate} ${fmtTime(f.departMin)} ${passenger.seat ?? "-"}`} />
+          <BoardingQr value={`${BRAND_NAME} DEMO${void_ ? " VOID" : ""}\n${booking.reference} ${f.flightNumber} ${f.origin}-${f.destination}\n${booking.travelDate} ${fmtTime(f.departMin)} ${passenger.seat ?? "-"}`} />
           <p className="text-[0.6rem] font-bold tracking-[0.3em] text-taupe-600">{booking.reference}</p>
         </div>
       </div>
